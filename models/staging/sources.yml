@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+    - name: staff_project
+      database: raw
+      schema: staff
+      tables:
+          - name: all_data
+            description: All raw data.

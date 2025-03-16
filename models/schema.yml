@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  - name: date
+    description: Date table.
+    columns:
+      - name: WorkDate
+        tests:
+          - unique
+          - not_null
+
+  - name: providers
+    description: Provider details.
+    columns:
+      - name: PROVNUM
+        tests:
+          - unique
+          - not_null
+      - name: PROVNAME
+        tests:
+          - not_null
+
+  - name: staffing
+    description: Staff working hours.
+    columns:
+      - name: PROVNUM
+        tests:
+          - not_null
+          - relationships:
+              to: ref('providers')
+              field: PROVNUM
+      - name: WorkDate
+        tests:
+          - not_null
+          - relationships:
+              to: ref('date')
+              field: WorkDate
+      - name: MDScensus
+
+        tests:
+          - not_null    
+      - name: nurse_role
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['RNDON', 'RNADMIN', 'RN', 'LPNADMIN', 'LPN', 'CNA', 'NATRN', 'MEDAIDE']
+      - name: employment_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ALL', 'EMP', 'CTR']
+      - name: hours
+        tests:
+          - not_null
+
+  - name: staffing_ratios
+    description: Staff-MDScensus ratio.
+    columns:
+      - name: PROVNUM
+        tests:
+          - not_null
+          - relationships:
+              to: ref('providers')
+              field: PROVNUM
+      - name: WorkDate
+        tests:
+          - not_null
+          - relationships:
+              to: ref('date')
+              field: WorkDate
+      - name: nurse_role
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['RNDON', 'RNADMIN', 'RN', 'LPNADMIN', 'LPN', 'CNA', 'NATRN', 'MEDAIDE']
+      - name: employment_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ALL', 'EMP', 'CTR']
+      - name: hour_mds_ratio
+        tests:
+          - not_null
