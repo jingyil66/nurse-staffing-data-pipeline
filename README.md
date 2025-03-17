@@ -2,7 +2,7 @@
 ## Project Overview
 This is a data engineering and analysis project to help the Nurse Staffing Agency optimize workforce distribution and enhance contract nurse placements across healthcare facilities in the U.S.
 
-In this project, I focused on creating an optimized **ETL (extract, transform, load)** pipeline to process 2024Q2 Payroll-Based Journal (PBJ) Daily Nurse Staffing data. It aims to build an efficient data engineering pipeline using **Apache Spark** to process **130 million+ rows** of data, **AWS S3** for raw data storage, **Snowflake** for cloud-based data warehousing, and **DBT** for data transformation and data modelimg. This data pipeline performs faster than previous data processing workflows. (Previous version: )
+In this project, I focused on creating an optimized **ETL (extract, transform, load)** pipeline to process 2024Q2 Payroll-Based Journal (PBJ) Daily Nurse Staffing data. It aims to build an efficient data engineering pipeline using **Apache Spark** to process **130 million+ rows** of data, **AWS S3** for raw data storage, **Snowflake** for cloud-based data warehousing, and **DBT** for data transformation and data modelimg. This data pipeline performs faster than previous data processing workflows. [Previous version](https://github.com/jingyil66/Nurse-Staffing-Project)
 
 The analysis part is supplemented by an interactive **Power BI dashboard** to visualize staffing trends, state-level variations, and the distribution of contract nurses. The report identifies key trends in 2024-Q2 nurse staffing and provides actionable recommendations for improving staffing allocation, supporting more efficient decision-making and better resource utilization across nursing facilities.
 ![Dashboard Screenshot](img/Dashboard_Screenshot.jpeg)
