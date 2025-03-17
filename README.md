@@ -5,11 +5,15 @@ This is a data engineering and analysis project to help the Nurse Staffing Agenc
 In this project, I focused on creating an optimized **ETL (extract, transform, load)** pipeline to process 2024Q2 Payroll-Based Journal (PBJ) Daily Nurse Staffing data. It aims to build an efficient data engineering pipeline using **Apache Spark** to process **130 million+ rows** of data, **AWS S3** for raw data storage, **Snowflake** for cloud-based data warehousing, and **DBT** for data transformation and data modelimg. This data pipeline performs faster than previous data processing workflows. (Previous version: )
 
 The analysis part is supplemented by an interactive **Power BI dashboard** to visualize staffing trends, state-level variations, and the distribution of contract nurses. The report identifies key trends in 2024-Q2 nurse staffing and provides actionable recommendations for improving staffing allocation, supporting more efficient decision-making and better resource utilization across nursing facilities.
+![Dashboard Screenshot](img/Dashboard_Screenshot.jpeg)
 
 ## Architecture
 
 In this project, I designed and implemented a scalable ETL (Extract, Transform, Load) pipeline to process and analyze Payroll-Based Journal (PBJ) Daily Nurse Staffing data (2024-Q2). The pipeline automates data ingestion, transformation, and storage, ensuring efficient processing and accessibility for further analysis.
+
 ### Pipeline Overview
+![Flow Chart](img/flow_chart.png)
+
 1. Containerization: To create a reproducible and scalable workflow, I deployed Apache Airflow in a Docker container for workflow orchestration. 
 
 2. Data Ingestion: The ETL pipeline automatically retrieves PBJ staffing data in JSON format from an API using Python and API requests. It is efficiently processed and transformed using Apache Spark to handle large volumes of data and ensure scalability.
@@ -19,6 +23,7 @@ In this project, I designed and implemented a scalable ETL (Extract, Transform, 
 4. Data Transformation and Data Modeling: Use DBT to transform data and structure original table to standardize formats, then transformed the original table into a Star Schema design to optimize analytical queries.
 
 5. Data Loading and Analytics: Perform SQL queries in the Snowflake data warehouse.
+
 ## Technology Used
 
 **Programming Languages**
@@ -48,7 +53,7 @@ Payroll Based Journal Daily Nurse Staffing (2024-Q2): <https://data.cms.gov/data
 More information about the dataset: <https://data.cms.gov/quality-of-care/payroll-based-journal-daily-nurse-staffing>
 
 ## Data Model & Data Flow Overview
-
+![Data Model](img/data_model.png)
 
 ## Running the ETL Pipeline
 
