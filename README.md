@@ -8,11 +8,11 @@ The analysis part is supplemented by an interactive **Power BI dashboard** to vi
 ![Dashboard Screenshot](img/Dashboard_Screenshot.jpeg)
 
 ## Architecture
+![Flow Chart](img/flow_chart.png)
 
 In this project, I designed and implemented a scalable ETL (Extract, Transform, Load) pipeline to process and analyze Payroll-Based Journal (PBJ) Daily Nurse Staffing data (2024-Q2). The pipeline automates data ingestion, transformation, and storage, ensuring efficient processing and accessibility for further analysis.
 
 ### Pipeline Overview
-![Flow Chart](img/flow_chart.png)
 
 1. Containerization: To create a reproducible and scalable workflow, I deployed Apache Airflow in a Docker container for workflow orchestration. 
 
