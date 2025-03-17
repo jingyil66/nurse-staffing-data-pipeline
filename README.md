@@ -73,9 +73,9 @@ Open `setup_conn` file and fill in your credentials.
  docker compose up --build -d
  ```
 - Set up connections in Airflow:
-  ```
-  docker exec -it scheduler python setup_conn.py
-  ```
+ ```
+ docker exec -it scheduler python setup_conn.py
+ ```
 You can access the Airflow UI at `http://localhost:8080/` with the following login credentials:
  - **Username:** `airflow`
  - **Password:** `airflow`
