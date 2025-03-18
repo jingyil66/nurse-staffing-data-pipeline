@@ -117,9 +117,9 @@ LPNs: States like Vermont (41.04%) and Maine (33.31%) show a higher percentage o
 
 CNAs: Vermont (33.77%) and New Hampshire (17.82%) also exhibit a higher proportion of contract workers.
 
-RNs: States such as Delaware (17.70%) and Oregon (16.79%) have a notable share of contract work hours.
+RNs: States such as Delaware (17.70%) and Massachusetts (16.96%) have a notable share of contract work hours.
 
-Recommendation: Sales team should focus the recruitment efforts in Vermont, Maine to fulfill the demand for LPNs; increase CNA recruitment efforts in Vermont and New Hampshire; increase RN recruitment efforts in Delaware and Oregon.
+Recommendation: Sales team should focus the recruitment efforts in Vermont, Maine to fulfill the demand for LPNs; increase CNA recruitment efforts in Vermont and New Hampshire; increase RN recruitment efforts in Delaware and Massachusetts.
 
 **5. Medical Aides in Illinois and New Jersey**
 
