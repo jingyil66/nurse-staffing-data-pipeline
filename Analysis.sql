@@ -38,6 +38,41 @@ FROM staffing s
 GROUP BY s.Nurse_Role
 ORDER BY contractor_percentage DESC;
 
+-- Contractor Nurse Staffing Hour Percentage by Role and State
+WITH Total_Staffing AS (
+    SELECT 
+        p.STATE,
+        s.Nurse_Role,
+        SUM(s.Hours) AS total_hours
+    FROM staffing s
+    JOIN providers p ON s.PROVNUM = p.PROVNUM
+    WHERE s.Employment_Type = 'ALL'
+    GROUP BY p.STATE, s.Nurse_Role
+),
+Contractor_Staffing AS (
+    SELECT 
+        p.STATE,
+        s.Nurse_Role,
+        SUM(s.Hours) AS contractor_hours
+    FROM staffing s
+    JOIN providers p ON s.PROVNUM = p.PROVNUM
+    WHERE s.Employment_Type = 'CTR'
+    GROUP BY p.STATE, s.Nurse_Role
+)
+SELECT 
+    t.STATE,
+    t.Nurse_Role,
+    c.contractor_hours,
+    t.total_hours,
+    CASE 
+        WHEN t.total_hours > 0 THEN (c.contractor_hours * 100.0 / t.total_hours)  
+        ELSE NULL
+    END AS contractor_staffing_percentage
+FROM Total_Staffing t
+LEFT JOIN Contractor_Staffing c 
+    ON t.STATE = c.STATE AND t.Nurse_Role = c.Nurse_Role
+ORDER BY t.Nurse_Role, contractor_staffing_percentage DESC;
+
 -- Month with the highest MDScensus
 SELECT 
     d.year,
